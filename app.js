@@ -1,39 +1,39 @@
 const reviews = [
     {
       id: 1,
-      name: "susan smith",
+      name: "rafaela braga",
       job: "web developer",
       img:
         "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
       text:
-        "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+        "Projeto inovador, com um caráter importante para a sustentabilidade e de grande impacto para o mundo. Parabéns pelo projeto!!!",
     },
     {
       id: 2,
-      name: "anna johnson",
+      name: "ana fernandes",
       job: "web designer",
       img:
         "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg",
       text:
-        "Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.",
+        "Adorei a ideia por trás do projeto. Isso sem dúvida irá impactar várias pessoas de forma positiva e única. Meus parabéns!",
     },
     {
       id: 3,
-      name: "peter jones",
-      job: "intern",
+      name: "joão augusto",
+      job: "estagiário",
       img:
         "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
       text:
-        "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
+        "Esse projeto traz um aprendizado muito grande, sem dúvidas você irá ganhar um prêmio por isso. Sucesso demais!!",
     },
     {
       id: 4,
-      name: "bill anderson",
-      job: "the boss",
+      name: "luiz fonseca",
+      job: "engenheiro",
       img:
         "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
       text:
-        "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
+        "Já vi projetos semelhantes mas nenhum chega perto desse, incrível, sem dúvidas isso irá servir de base para vários outros projetos como esse. Parabéns!",
     },
 ];
 
@@ -50,18 +50,19 @@ let currentItem = 0;
 
 window.addEventListener('DOMContentLoaded', function(){
     showPerson(currentItem);
+    console.log(currentItem)
 });
 
 nextBtn.addEventListener('click', function(){
     currentItem++;
-    if(currentItem === 4) currentItem = 0
+    if(currentItem >= reviews.length) currentItem = 0
     showPerson(currentItem)
     console.log(currentItem)
 });
 
 prevBtn.addEventListener('click', function(){
     currentItem--;
-    if(currentItem === -1) currentItem = 3
+    if(currentItem === -1) currentItem = reviews.length - 1 ;
     showPerson(currentItem);
     console.log(currentItem)
 })
